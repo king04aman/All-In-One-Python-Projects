@@ -5,12 +5,13 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
-![GitHub issues](https://img.shields.io/github/issues/king04aman/keylogger.svg)
-![GitHub contributors](https://img.shields.io/github/contributors/king04aman/hacktoberfest2022.svg)
-![GitHub repo size in bytes](https://img.shields.io/github/repo-size/kevinelong/All-In-One-Python-Projects.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/king04aman/hacktoberfest2022.svg)
-![Lines of Code](https://img.shields.io/tokei/lines/github/king04aman/hacktoberfest2022?color=red&label=Lines%20of%20Code)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls)
+![GitHub issues](https://img.shields.io/github/issues/king04aman/All-In-One-Python-Projects.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/king04aman/All-In-One-Python-Projects.svg)
+![GitHub repo size in bytes](https://img.shields.io/github/repo-size/king04aman/All-In-One-Python-Projects.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/king04aman/All-In-One-Python-Projects.svg)
+![Lines of Code](https://img.shields.io/tokei/lines/github/king04aman/All-In-One-Python-Projects?color=red&label=Lines%20of%20Code)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/king04aman/All-In-One-Python-Projects.svg)]
+
 
 <h2 align="center"> Description </h2>
 
@@ -55,8 +56,8 @@ Thanks go to these **Wonderful Contributors** ✨✨:
 <table>
 	<tr>
 		<td>
-			<a href="https://github.com/king04aman/hacktoberfest2022/graphs/contributors">
-            <img src="https://contrib.rocks/image?repo=king04aman/hacktoberfest2022" />
+			<a href="https://github.com/king04aman/All-In-One-Python-Projects/graphs/contributors">
+            <img src="https://contrib.rocks/image?repo=king04aman/All-In-One-Python-Projects" />
             </a>
 		</td>
 	</tr>
