@@ -45,7 +45,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 <hr>
 
-<h2 align=center> Contribution Guide</h2>
+<h2 align='center'> Contribution Guide</h2>
 
 - Have a look at [Contributing Guidelines](CONTRIBUTING.md).
 - Take a look at the existing issues or create your own issues.
@@ -78,7 +78,7 @@ Thanks go to these **Wonderful Contributors** ✨✨:
 <table>
 	<tr>
         <td align="center">
-            <a href="https://github.com/avinashkranjan">
+            <a href="https://github.com/king04aman">
             <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/62813940?v=4&h=250&w=250&fit=cover&mask=circle&maxage=7d" width=100px height=100px />
             </a></br> 
             <h4 style="color:#ff8c00;font-weight: bolder; font-size: 15px">Aman Kumar</h4>
