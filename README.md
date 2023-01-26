@@ -10,7 +10,7 @@
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/king04aman/All-In-One-Python-Projects.svg)
 ![GitHub top language](https://img.shields.io/github/languages/top/king04aman/All-In-One-Python-Projects.svg)
 ![Lines of Code](https://img.shields.io/tokei/lines/github/king04aman/All-In-One-Python-Projects?color=red&label=Lines%20of%20Code)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/king04aman/All-In-One-Python-Projects.svg)]
+![GitHub pull requests](https://img.shields.io/github/issues-pr/king04aman/All-In-One-Python-Projects.svg)
 
 
 <h2 align="center"> Description </h2>
@@ -45,9 +45,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 <hr>
 
-<h2 align=center> Contributing </h2>
+<h2 align=center> Contribution Guide</h2>
 
-- Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our [code of conduct](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
+- Have a look at [Contributing Guidelines](CONTRIBUTING.md).
+- Take a look at the existing issues or create your own issues.
+- Avoid making pull request unless you are assigned with the issue.
+- Select the project on which you want to work or you can add your own project.
+- Create an issue with description on which project you want to work and wait for approval.
+- While making pull request add issue number with `#` (for example `#04`)
+- After approval fork this repository, add your changes then make pull request with issue number and wait for review.
+- Star this repository. 🌟
+
 
 <h2 align=center> Awesome Contributors 🤩 </h2>
 
