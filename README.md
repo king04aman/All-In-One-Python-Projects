@@ -1,16 +1,18 @@
 <h1 align="center"> All-In-One-Python-Projects </h1>
 
-<!-- project badges -->
-[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+<!-- banner -->
+![All-In-One-Python-Projects](https://socialify.git.ci/king04aman/all-in-one-python-projects/image?description=1&font=Jost&language=1&logo=https%3A%2F%2Fimages.weserv.nl%2F%3Furl%3Dhttps%3A%2F%2Favatars.githubusercontent.com%2Fu%2F62813940%3Fv%3D4%26h%3D250%26w%3D250%26fit%3Dcover%26mask%3Dcircle%26maxage%3D7d&name=1&owner=1&pattern=Floating%20Cogs&theme=Dark)
 
-![GitHub issues](https://img.shields.io/github/issues/king04aman/All-In-One-Python-Projects.svg)
-![GitHub contributors](https://img.shields.io/github/contributors/king04aman/All-In-One-Python-Projects.svg)
-![GitHub repo size in bytes](https://img.shields.io/github/repo-size/king04aman/All-In-One-Python-Projects.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/king04aman/All-In-One-Python-Projects.svg)
-![Lines of Code](https://img.shields.io/tokei/lines/github/king04aman/All-In-One-Python-Projects?color=red&label=Lines%20of%20Code)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/king04aman/All-In-One-Python-Projects.svg)
+<!-- project badges -->
+[![BuiltByDev](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+[![BuiltWithLov](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![MadeWithPy](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+![Issues](https://img.shields.io/github/issues/king04aman/All-In-One-Python-Projects.svg)
+![Contributors](https://img.shields.io/github/contributors/king04aman/All-In-One-Python-Projects.svg)
+![SizeInBytes](https://img.shields.io/github/repo-size/king04aman/All-In-One-Python-Projects.svg)
+![TopLanguage](https://img.shields.io/github/languages/top/king04aman/All-In-One-Python-Projects.svg)
+![LinesOfCode](https://img.shields.io/tokei/lines/github/king04aman/All-In-One-Python-Projects?color=red&label=Lines%20of%20Code)
+![PullRequests](https://img.shields.io/github/issues-pr/king04aman/All-In-One-Python-Projects.svg)
 
 
 <h2 align="center"> Description </h2>
