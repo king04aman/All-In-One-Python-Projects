@@ -1,0 +1,2 @@
+pyTelegramBotAPI==4.9.0
+APScheduler==3.9.1
