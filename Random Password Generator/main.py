@@ -13,8 +13,11 @@ def generate_password(length, exclude_ambiguous):
 
 def main():
     parser = argparse.ArgumentParser(description='Generate a random password.')
+    # python main.py 
     parser.add_argument('--length', type=int, default=12, help='Length of the password (default: 12)')
+    # python main.py --length 16 
     parser.add_argument('--exclude-ambiguous', action='store_true', help='Exclude ambiguous characters')
+    # python main.py --exclude-ambiguous
     args = parser.parse_args()
 
     password = generate_password(args.length, args.exclude_ambiguous)
