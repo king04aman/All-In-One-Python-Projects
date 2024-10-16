@@ -1,0 +1,10 @@
+requests/netcup_egg_tracker.egg-info
+**/build/
+**/dist/
+**/log/
+**/config/
+.vscode/*
+**/__pycache__/
+*.ini
+!__ini__.py
+*eggs_*

@@ -1,0 +1,34 @@
+/netcup_egg_tracker.egg-info
+**/build/
+**/dist/
+**/log/
+**/config/
+.vscode/*
+**/__pycache__/
+*.ini
+!__ini__.py
+*eggs_*
+
+#  Git Ignore File
+# 
+#  This file is used to specify files and directories that should be ignored by Git.
+#  You can use various operators and patterns to match files and directories.
+#
+#  Here are some examples of patterns you can use:
+#
+#  *       Matches zero or more characters in a filename or path segment.
+#  ?       Matches any single character in a filename or path segment.
+#  **      Matches any number of directories (including none) in a pathname.
+#  !       Negates a pattern, so files that match will not be ignored.
+#  #       Indicates a comment, which is ignored by Git.
+#           
+#  Here are some examples of how to use these patterns:
+#
+#  *.pyc          Matches any files ending with .pyc.
+#  test/          Matches the directory 'test'.
+#  **/test/       Matches any directory named 'test', regardless of where it is in the directory tree.
+#  build/*        Matches any files in the 'build' directory, but not the directory itself.
+#  !build/*.txt   Does not ignore any .txt files in the 'build' directory, even though 'build/' is ignored.
+#
+#  For more information on Git ignore patterns, see the Git documentation:
+#  https://git-scm.com/docs/gitignore
