@@ -17,6 +17,13 @@ jobs:
           token: ${{ secrets.ACTION_TOKEN }}
           persist-credentials: true
 
+      - name: Fetch latest changes
+        run: git fetch origin
+
+      - name: Merge changes
+        run: |
+          git merge origin/main || echo "No new changes to merge or merge conflict"
+
       - name: Generate project list
         run: |
           exclude_dirs=(.github)
@@ -52,7 +59,7 @@ jobs:
       - name: Commit project list
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "project-maintainer[bot]"
+          git config --global user.name "github-actions[bot]"
           git add PROJECTS.md
           git commit -m "Update project list"
           git push --force-with-lease
