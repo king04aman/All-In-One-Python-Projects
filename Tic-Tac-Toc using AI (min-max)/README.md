@@ -36,6 +36,11 @@ pip install pygame numpy
 4. **Customize the Script**:
    You can modify game settings, such as board size and player options, directly in the script.
 
+# Gameplay Instructions
+- **Player vs AI:**: Click on the grid to make your move. The AI will respond automatically.
+- **AI Difficulty Levels**:  You can adjust the difficulty of the AI in the game settings to suit your skill level. Higher levels make the AI more challenging.
+- **Restart Game**: Press the R key to restart the game at any time.
+
 # Usage
 **Player vs AI**: Click on the grid to make your move. The AI will respond automatically.
 
@@ -43,6 +48,9 @@ pip install pygame numpy
 
 # Example
 After starting the game, you can play by clicking on the grid cells. The AI will make its move following your turn, and the game will continue until one player wins or the game ends in a draw.
+![Game Screen](screenshots/screenshot1.png)
+![Winning State](screenshots/screenshot2.png)
+
 
 # Author
 **[Naumantamboli](https://github.com/Naumantamboli)**
