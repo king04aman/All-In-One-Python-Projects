@@ -1,0 +1,3 @@
+geopy
+prompt_toolkit
+fpdf
