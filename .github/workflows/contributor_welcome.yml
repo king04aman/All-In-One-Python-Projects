@@ -10,20 +10,20 @@ jobs:
   greet_new_contributor:
     runs-on: ubuntu-latest
     steps:
-      - uses: bubkoo/welcome-action@v1
+      - uses: wow-actions/welcome@v1
         with:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_SECRET }}
-          INITIAL_ISSUE: >
+          FIRST_ISSUE: >
             👋 Greetings @{{ author }}!
             
             We're thrilled to see you opening your first issue! Your input is invaluable to us. Don’t forget to adhere to our issue template for the best experience.
 
-          INITIAL_PR: >
+          FIRST_PR: >
             👋 Welcome aboard, @{{ author }}!
             
             We're delighted to have your first pull request! Please take a moment to check our contributing guidelines to ensure a smooth process.
 
-          FIRST_PR_COMPLETED: >
+          FIRST_PR_MERGED: >
             🎉 Kudos @{{ author }}!
             
             You've just merged your first pull request! We're excited to have you in our community. Keep up the fantastic contributions!
