@@ -23,6 +23,5 @@ jobs:
             good first issue
             hacktoberfest
           excludeLabels: |
-                help wanted
-                Thank You
-    
+            help wanted
+            Thank You
