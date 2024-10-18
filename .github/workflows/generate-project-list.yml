@@ -1,0 +1,55 @@
+name: Generate Project List
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate project list
+        run: |
+          exclude_dirs=(.github)
+          exclude_files=("LICENSE" "README.md" "CONTRIBUTING.md" "Example README.md" "CODE_OF_CONDUCT.md" "PROJECTS.md")
+
+          projects=()
+          for dir in */; do
+            if [[ ! " ${exclude_dirs[@]} " =~ " ${dir%/} " ]]; then
+              projects+=("$dir")
+            fi
+          done
+
+          echo "# Project List" > PROJECTS.md
+          echo "" >> PROJECTS.md
+
+          for project in "${projects[@]}"; do
+            project_name=${project%/}
+            echo "* [$project_name](./$project_name)" >> PROJECTS.md
+          done
+
+          for file in "${exclude_files[@]}"; do
+            sed -i "/$file/d" PROJECTS.md
+          done
+
+      - name: Check for changes
+        run: |
+          git diff --exit-code -- PROJECTS.md
+          if [ $? -eq 0 ]; then
+            echo "No changes detected, exiting."
+            exit 0
+          fi
+
+      - name: Commit project list
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "project-maintainer[bot]"
+          git add PROJECTS.md
+          git commit -m "Update project list"
+          git push --force-with-lease
