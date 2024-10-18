@@ -48,21 +48,19 @@ jobs:
             sed -i "/$file/d" PROJECTS.md
           done
 
-      - name: Check for changes
-        run: |
-          git diff --exit-code -- PROJECTS.md
-          if [ $? -eq 0 ]; then
-            echo "No changes detected, exiting."
-            exit 0
-          fi
-
+          # Debug output to check the content of PROJECTS.md
+          cat PROJECTS.md
+          
       - name: Commit project list
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git add PROJECTS.md
-          git commit -m "Update project list"
-          git push --force-with-lease
+          if ! git diff --cached --exit-code; then
+            git commit -m "Update project list"
+            git push --force-with-lease
+          else
+            echo "No changes to commit."
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
-          
