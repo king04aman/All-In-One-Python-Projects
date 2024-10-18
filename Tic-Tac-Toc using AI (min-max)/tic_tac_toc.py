@@ -18,12 +18,16 @@ BG_COLOR = (28, 170, 156)
 LINE_COLOR = (23, 145, 135)
 CIRCLE_COLOR = (239, 231, 200)
 CROSS_COLOR = (66, 66, 66)
+TEXT_COLOR = (255, 255, 255)
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Tic Tac Toe')
 screen.fill(BG_COLOR)
 
+font = pygame.font.Font(None, 40)  # Font for displaying messages
 board = np.zeros((BOARD_ROWS, BOARD_COLS))
+
+difficulty = "medium"  # AI difficulty level ("easy", "medium", "hard")
 
 def draw_lines():
     for row in range(1, BOARD_ROWS):
@@ -48,10 +52,8 @@ def draw_figures():
                                  (col * SQUARE_SIZE + SQUARE_SIZE - SPACE, row * SQUARE_SIZE + SQUARE_SIZE - SPACE),
                                  CROSS_WIDTH)
 
-
 def mark_square(row, col, player):
     board[row][col] = player
-
 
 def available_square(row, col):
     return board[row][col] == 0
@@ -60,7 +62,6 @@ def is_board_full():
     return np.all(board != 0)
 
 def check_win(player):
-   
     for row in range(BOARD_ROWS):
         if np.all(board[row, :] == player):
             return True
@@ -73,8 +74,14 @@ def check_win(player):
         return True
     return False
 
+def display_message(message):
+    text = font.render(message, True, TEXT_COLOR)
+    text_rect = text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+    screen.blit(text, text_rect)
+    pygame.display.update()
+    pygame.time.wait(2000)  # Wait for 2 seconds to display the message
 
-# Minimax algorithm
+# Minimax algorithm with difficulty levels
 def minimax(board, depth, is_maximizing):
     if check_win(2):  # AI win
         return 1
@@ -104,8 +111,7 @@ def minimax(board, depth, is_maximizing):
                     best_score = min(score, best_score)
         return best_score
 
-
-# AI Move
+# AI Move based on difficulty level
 def ai_move():
     best_score = -np.inf
     move = None
@@ -118,7 +124,15 @@ def ai_move():
                 if score > best_score:
                     best_score = score
                     move = (row, col)
+    
     if move:
+        mark_square(move[0], move[1], 2)
+
+# Easy AI move: choose a random available square
+def easy_ai_move():
+    available_moves = [(row, col) for row in range(BOARD_ROWS) for col in range(BOARD_COLS) if available_square(row, col)]
+    if available_moves:
+        move = available_moves[np.random.randint(len(available_moves))]
         mark_square(move[0], move[1], 2)
 
 def restart():
@@ -126,7 +140,6 @@ def restart():
     draw_lines()
     global board
     board = np.zeros((BOARD_ROWS, BOARD_COLS))
-
 
 player = 1  # Player 1 is human
 game_over = False
@@ -149,12 +162,18 @@ while True:
             if available_square(clicked_row, clicked_col):
                 mark_square(clicked_row, clicked_col, player)
                 if check_win(player):
+                    display_message("Player Wins!")
                     game_over = True
                 player = 2
 
         if player == 2 and not game_over:
-            ai_move()
+            if difficulty == "easy":
+                easy_ai_move()
+            else:
+                ai_move()
+                
             if check_win(2):
+                display_message("AI Wins!")
                 game_over = True
             player = 1
 
@@ -163,6 +182,10 @@ while True:
                 restart()
                 game_over = False
                 player = 1
+
+        if game_over and is_board_full():
+            display_message("It's a Draw!")
+            game_over = True
 
     draw_figures()
     pygame.display.update()
