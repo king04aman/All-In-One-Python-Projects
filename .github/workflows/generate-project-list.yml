@@ -41,7 +41,8 @@ jobs:
 
           for project in "${projects[@]}"; do
             project_name=${project%/}
-            echo "* [$project_name](./$project_name)" >> PROJECTS.md
+            safe_project_name=${project_name// /-}
+            echo "* [$project_name](./$safe_project_name)" >> PROJECTS.md
           done
 
           for file in "${exclude_files[@]}"; do
@@ -50,7 +51,7 @@ jobs:
 
           # Debug output to check the content of PROJECTS.md
           cat PROJECTS.md
-          
+
       - name: Commit project list
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
