@@ -10,7 +10,7 @@ jobs:
   greet_new_contributor:
     runs-on: ubuntu-latest
     steps:
-      - uses: wow-actions/welcome@v1.3.1
+      - uses: bubkoo/welcome-action@v1
         with:
           GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
           FIRST_ISSUE: >
