@@ -41,8 +41,8 @@ jobs:
 
           for project in "${projects[@]}"; do
             project_name=${project%/}
-            safe_project_name=${project_name// /-}
-            echo "* [$project_name](./$safe_project_name)" >> PROJECTS.md
+            safe_project_name=${project_name// /%20}
+            echo "* [$project_name](/tree/main/$safe_project_name)" >> PROJECTS.md
           done
 
           for file in "${exclude_files[@]}"; do
