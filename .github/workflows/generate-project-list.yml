@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACTION_TOKEN }}
+          persist-credentials: true
 
       - name: Generate project list
         run: |
@@ -53,3 +56,6 @@ jobs:
           git add PROJECTS.md
           git commit -m "Update project list"
           git push --force-with-lease
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          
