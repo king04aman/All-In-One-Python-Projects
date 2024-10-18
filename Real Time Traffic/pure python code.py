@@ -13,7 +13,7 @@ def get_traffic_data(lat, lng):
     except requests.exceptions.RequestException as e:
         print(f"Error fetching traffic data: {e}")
         return None
-
+   
 # Function to visualize traffic data on a map
 def visualize_traffic(data, lat, lng):
     # Create a map centered around the given GPS coordinates
