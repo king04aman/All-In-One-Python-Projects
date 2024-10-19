@@ -1,5 +1,9 @@
 name: New Contributor Welcome
 
+permissions:
+  issues: write
+  pull-requests: write
+
 on:
   pull_request:
     types: [opened, closed]
@@ -12,7 +16,8 @@ jobs:
     steps:
       - uses: wow-actions/welcome@v1.3.1
         with:
-          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FIRST_ISSUE_REACTIONS: "+1, hooray, rocket, heart"
           FIRST_ISSUE: >
             👋 Greetings @{{ author }}!
             
@@ -28,4 +33,5 @@ jobs:
             
             You've just merged your first pull request! We're excited to have you in our community. Keep up the fantastic contributions!
           STAR_MESSAGE: If you enjoy this project, please consider ⭐ starring ⭐ our repository!
-          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
