@@ -6,7 +6,7 @@ import sqlite3
 class TodoApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Advanced To-Do List")
+        self.root.title("To-Do List App")
         self.root.geometry("900x600")
 
         # Initialize attributes
@@ -24,6 +24,9 @@ class TodoApp:
         self.apply_theme()  # Apply theme after frames are created
         self.create_sidebar()
         self.load_tasks()
+
+        # Bind the window close event to close the database connection
+        self.root.protocol("WM_DELETE_WINDOW", self.close_app)
 
     def create_sidebar(self):
         """Create the sidebar with navigation options."""
@@ -110,6 +113,7 @@ class TodoApp:
     def create_database(self):
         """Create the tasks table if it doesn't exist."""
         self.conn = sqlite3.connect("tasks.db")
+        # Create the table if it doesn't exist yet
         with self.conn:
             self.conn.execute("""
                 CREATE TABLE IF NOT EXISTS tasks (
@@ -157,52 +161,68 @@ class TodoApp:
         self.task_listbox.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
 
     def load_tasks(self):
-        """Load all tasks from the database."""
+        """Load all pending tasks from the database."""
         self.task_listbox.delete(0, tk.END)
         cursor = self.conn.cursor()
+        # Retrieve tasks that are not yet completed (completed=0)
         cursor.execute("SELECT * FROM tasks WHERE completed=0")
         for row in cursor.fetchall():
+            # Format the task details for display in the listbox
             self.task_listbox.insert(tk.END, f"{row[1]} | {row[2]} | Due: {row[3]} | Priority: {row[4]}")
 
     def load_completed_tasks(self):
-        """Load completed tasks."""
+        """Load completed tasks from the database."""
         self.task_listbox.delete(0, tk.END)
         cursor = self.conn.cursor()
+        # Retrieve tasks that are marked as completed (completed=1)
         cursor.execute("SELECT * FROM tasks WHERE completed=1")
         for row in cursor.fetchall():
             self.task_listbox.insert(tk.END, f"{row[1]} | {row[2]} | Due: {row[3]} | Priority: {row[4]}")
 
     def load_pending_tasks(self):
         """Load pending tasks."""
+        # Reuse the load_tasks method since it already loads pending tasks
         self.load_tasks()
 
     def add_task(self):
-        """Add a new task."""
+        """Add a new task to the database."""
         task = self.task_entry.get()
         category = self.category_entry.get()
         due_date = self.due_date_entry.get()
         priority = self.priority_var.get()
 
+        # Validate that required fields are filled
         if task and category and due_date:
             with self.conn:
+                # Insert a new task into the database
                 self.conn.execute("INSERT INTO tasks (task, category, due_date, priority) VALUES (?, ?, ?, ?)", 
                                   (task, category, due_date, priority))
+            # Refresh the task list to show the new entry
             self.load_tasks()
+            # Clear the input fields after adding the task
             self.task_entry.delete(0, tk.END)
             self.category_entry.delete(0, tk.END)
         else:
             messagebox.showwarning("Input Error", "Please fill all fields.")
 
     def search_tasks(self, event):
-        """Search tasks based on input."""
+        """Search tasks based on input in the search bar."""
         query = self.search_entry.get().lower()
         self.task_listbox.delete(0, tk.END)
         cursor = self.conn.cursor()
+        # Retrieve all tasks and filter by the search query
         cursor.execute("SELECT * FROM tasks WHERE completed=0")
         for row in cursor.fetchall():
             task_str = f"{row[1]} | {row[2]} | Due: {row[3]} | Priority: {row[4]}"
+            # Display only tasks that match the search query
             if query in task_str.lower():
                 self.task_listbox.insert(tk.END, task_str)
+
+    def close_app(self):
+        """Close the database connection and exit the application."""
+        if self.conn:
+            self.conn.close()
+        self.root.destroy()
 
 if __name__ == "__main__":
     root = tk.Tk()
