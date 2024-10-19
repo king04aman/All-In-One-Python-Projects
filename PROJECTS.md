@@ -27,6 +27,7 @@
 * [Random Quotes Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Random%20Quotes%20Generator)
 * [Real-Time Cryptocurrency Price Tracker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Real-Time%20Cryptocurrency%20Price%20Tracker)
 * [Recipe Finder with Meal Planner](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Recipe%20Finder%20with%20Meal%20Planner)
+* [Resume Builder](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Resume%20Builder)
 * [Simple Assistant](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Simple%20Assistant)
 * [Speech To Text](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Speech%20To%20Text)
 * [Spell Checker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Spell%20Checker)
