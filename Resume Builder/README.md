@@ -1,26 +1,29 @@
-# Geographic Distance and Travel Time Calculator
+# Interactive Resume Builder
 
-This Python script calculates the geodesic distance between two geographic coordinates and estimates travel time based on a given average speed. It uses the geopy library to compute distances.
+This Python project is a command-line interface (CLI) tool for building professional resumes. The tool allows users to interactively input various sections of their resume, such as contact information, work experience, education, skills, projects, certifications, and achievements. The resume is then formatted and exported as a PDF file.
 
 ## Features
 
-- Input coordinates for two locations (latitude and longitude) interactively.
-- Calculate the distance between the two coordinates in kilometers.
-- Estimate the travel time based on a given average speed (in km/h).
+- Interactive CLI for entering resume data (contact info, work experience, education, etc.).
+- Ability to add, update, and modify multiple resume sections.
+- Automatically generates a well-formatted PDF resume.
+- Includes functionality to add detailed descriptions for work experience and projects.
+- Supports multiple certifications and achievements.
+- Simple and intuitive navigation using `prompt_toolkit` for menu interactions.
 
 ## Prerequisites
 
-- Python 3.x installed on your system.
+- Python 3.x must be installed on your system.
 
-## Setup
+## Setup Instructions
 
-1. Clone the repository
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/username/your-repo.git
     cd your-repo
     ```
 
-2. Create and activate a virtual environment
+2. **Create and activate a virtual environment**:
 
     For macOS/Linux:
     ```bash
@@ -34,28 +37,29 @@ This Python script calculates the geodesic distance between two geographic coord
     venv\Scripts\activate
     ```
 
-3. Install the required dependencies
-
-    The required packages are listed in `requirements.txt`. Install them using the following command:
+3. **Install the necessary dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Run the application
+4. **Run the application**:
     ```bash
-    python script.py
+    python resume_builder.py
     ```
 
 ## Usage
 
-1. After running the script, enter the latitude and longitude of the first location.
-2. Enter the latitude and longitude of the second location.
-3. Enter the average speed (in km/h).
-4. The script will output the distance between the locations and the estimated travel time.
+- **Interactive Menu**: The program presents a menu to select which section of the resume you want to edit or add.
+- **PDF Generation**: Once all sections are filled, you can generate a PDF with all the input data.
+- **Options**:
+    - Add or edit Contact Information, Work Experience, Education, Skills, Projects, Certifications, and Achievements.
+    - Generate the PDF after completing the resume input.
 
 ## Dependencies
 
-- `geopy`: A Python library to calculate geodesic distances.
+- `geopy`: For any geographic distance calculation (if needed for future features).
+- `prompt_toolkit`: A library for building beautiful command-line applications.
+- `fpdf`: A library for generating PDF documents from the entered resume data.
 
 ## License
 
