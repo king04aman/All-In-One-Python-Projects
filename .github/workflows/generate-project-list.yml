@@ -1,0 +1,67 @@
+name: Generate Project List
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACTION_TOKEN }}
+          persist-credentials: true
+
+      - name: Fetch latest changes
+        run: git fetch origin
+
+      - name: Merge changes
+        run: |
+          git merge origin/main || echo "No new changes to merge or merge conflict"
+
+      - name: Generate project list
+        run: |
+          exclude_dirs=(.github)
+          exclude_files=("LICENSE" "README.md" "CONTRIBUTING.md" "Example README.md" "CODE_OF_CONDUCT.md" "PROJECTS.md")
+
+          projects=()
+          for dir in */; do
+            if [[ ! " ${exclude_dirs[@]} " =~ " ${dir%/} " ]]; then
+              projects+=("$dir")
+            fi
+          done
+
+          echo "# Project List" > PROJECTS.md
+          echo "" >> PROJECTS.md
+
+          for project in "${projects[@]}"; do
+            project_name=${project%/}
+            safe_project_name=${project_name// /%20}
+            echo "* [$project_name](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/$safe_project_name)" >> PROJECTS.md
+          done
+
+          for file in "${exclude_files[@]}"; do
+            sed -i "/$file/d" PROJECTS.md
+          done
+
+          # Debug output to check the content of PROJECTS.md
+          cat PROJECTS.md
+
+      - name: Commit project list
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add PROJECTS.md
+          if ! git diff --cached --exit-code; then
+            git commit -m "Update project list"
+            git push --force-with-lease
+          else
+            echo "No changes to commit."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
