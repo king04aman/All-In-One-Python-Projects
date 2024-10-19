@@ -1,0 +1,7 @@
+networkx==3.3
+nltk==3.9.1
+numpy==2.1.2
+pandas==2.2.3
+Requests==2.32.3
+scikit_learn==1.5.2
+tqdm==4.66.5
