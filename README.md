@@ -4,14 +4,14 @@
 ![All-In-One-Python-Projects](https://socialify.git.ci/king04aman/all-in-one-python-projects/image?description=1&font=Jost&language=1&logo=https%3A%2F%2Fimages.weserv.nl%2F%3Furl%3Dhttps%3A%2F%2Favatars.githubusercontent.com%2Fu%2F62813940%3Fv%3D4%26h%3D250%26w%3D250%26fit%3Dcover%26mask%3Dcircle%26maxage%3D7d&name=1&owner=1&pattern=Floating%20Cogs&theme=Dark)
 
 <!-- project badges -->
-[![BuiltByDev](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
-[![BuiltWithLov](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![MadeWithPy](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![BuiltByDev](https://forthebadge.com/images/badges/built-by-developers.svg)](https://github.com/king04aman)
+[![BuiltWithLov](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/king04aman)
+[![MadeWithPy](https://forthebadge.com/images/badges/made-with-python.svg)](https://github.com/king04aman)
+<br/>
 ![Issues](https://img.shields.io/github/issues/king04aman/All-In-One-Python-Projects.svg)
 ![Contributors](https://img.shields.io/github/contributors/king04aman/All-In-One-Python-Projects.svg)
 ![SizeInBytes](https://img.shields.io/github/repo-size/king04aman/All-In-One-Python-Projects.svg)
 ![TopLanguage](https://img.shields.io/github/languages/top/king04aman/All-In-One-Python-Projects.svg)
-![LinesOfCode](https://img.shields.io/tokei/lines/github/king04aman/All-In-One-Python-Projects?color=red&label=Lines%20of%20Code)
 ![PullRequests](https://img.shields.io/github/issues-pr/king04aman/All-In-One-Python-Projects.svg)
 
 
@@ -63,15 +63,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 Thanks go to these **Wonderful Contributors** ✨✨:
 
-<table>
-	<tr>
-		<td>
-			<a href="https://github.com/king04aman/All-In-One-Python-Projects/graphs/contributors">
-            <img src="https://contrib.rocks/image?repo=king04aman/All-In-One-Python-Projects" />
-            </a>
-		</td>
-	</tr>
-</table>
+<a href="https://github.com/king04aman/All-In-One-Python-Projects/graphs/contributors">
+	<object type="image/svg+xml" data="CONTRIBUTORS.svg" style="width: 100%; height: auto;">
+			<img src="CONTRIBUTORS.svg" style="width: 100%; height: auto;" alt="Contributors" />
+	</object>
+</a>
 
 <hr>
 
