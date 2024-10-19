@@ -25,6 +25,7 @@
 * [QR Code Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/QR%20Code%20Generator)
 * [Random Movie Selector](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Random%20Movie%20Selector)
 * [Random Quotes Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Random%20Quotes%20Generator)
+* [Real-Time Cryptocurrency Price Tracker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Real-Time%20Cryptocurrency%20Price%20Tracker)
 * [Recipe Finder with Meal Planner](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Recipe%20Finder%20with%20Meal%20Planner)
 * [Simple Assistant](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Simple%20Assistant)
 * [Speech To Text](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Speech%20To%20Text)
