@@ -34,6 +34,7 @@
 * [Telegram Bot](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Telegram%20Bot)
 * [Text To Speech](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Text%20To%20Speech)
 * [Text to Morse Code](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Text%20to%20Morse%20Code)
+* [To Do App](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/To%20Do%20App)
 * [Translator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Translator)
 * [URL Sortener](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/URL%20Sortener)
 * [Validate-Email](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Validate-Email)
