@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Journal Entries</h1>
+   
+    <div class="container">
+         {% for result in results %}
+        <p>Date: {{ result[2] }}, Mood: {{ result[3] }}, Tags: {{ result[5] }}</p>
+            <p>{{ result[4] }}</p>
+            <hr>
+        {% else %}
+            <p>No entries found.</p>
+        {% endfor %}
+    </div>
+        
+</body>
+</html>

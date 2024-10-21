@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #2980b9;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Main Content */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text within the container */
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px; /* Add margin to the top */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3498db;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2980b9;
+    color: white;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: #2980b9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Main Content */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+label {
+    display: block; /* Ensure labels are on separate lines */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type="text"],
+form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px;
+    display:flex;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3498db;
+}
+
+/* Tag List */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the tags horizontally */
+    flex-wrap: wrap; /* Allows the tags to wrap if they exceed the width */
+    gap: 10px;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #3498db;
+}
+
+/* Search Results */
+.search-results {
+    margin-top: 20px;
+}
+
+.search-results p {
+    padding: 10px;
+    background: #ecf0f1;
+    border-left: 5px solid #2980b9;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2980b9;
+    color: white;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%; /* Take full width of the container */
+    padding: 10px; /* Add padding for comfort */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+textarea {
+    height: 100px; /* Set a height for the textarea */
+}
+/* Search Results Styles */
+.results {
+    margin-top: 30px; /* Space above search results */
+    text-align: left; /* Align results to the left */
+}
+
+.results ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.results li {
+    background-color: #f4f4f9; /* Light background for entries */
+    border: 1px solid #ccc; /* Border for each entry */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding for comfort */
+    margin-bottom: 15px; /* Space between entries */
+}
