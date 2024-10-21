@@ -26,7 +26,7 @@ This project implements a **TextRank-based approach** to extract summaries from 
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/king04aman/All-In-One-Python-Projects.git
    ```
 2. Install the required Python libraries:
 
