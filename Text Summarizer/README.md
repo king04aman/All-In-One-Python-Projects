@@ -1,7 +1,3 @@
-Here's a professional README documentation for the provided TextRank Text Summarization script:
-
----
-
 # TextRank-based Text Summarization
 
 This project implements a **TextRank-based approach** to extract summaries from large textual data, such as articles. The summarization algorithm ranks sentences based on their relevance and importance, using concepts derived from the PageRank algorithm applied to text.
