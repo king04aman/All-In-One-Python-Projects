@@ -32,6 +32,7 @@
 * [Speech To Text](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Speech%20To%20Text)
 * [Spell Checker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Spell%20Checker)
 * [Telegram Bot](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Telegram%20Bot)
+* [Text Summarizer](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Text%20Summarizer)
 * [Text To Speech](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Text%20To%20Speech)
 * [Text to Morse Code](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Text%20to%20Morse%20Code)
 * [Tic-Tac-Toc using AI (min-max)](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Tic-Tac-Toc%20using%20AI%20(min-max))
