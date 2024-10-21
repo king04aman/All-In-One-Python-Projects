@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tags</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Tags</h1>
+    <ul>
+        {% for tag in tags %}
+            <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        {% else %}
+            <li>No tags found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

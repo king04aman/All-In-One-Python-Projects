@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Journal Entries</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Search Journal Entries</h1>
+        <form method="POST">
+            Search by keyword or date (YYYY-MM-DD): <input type="text" name="search_term"><br>
+            <input type="submit" value="Search">
+        </form>
+</body>
+</html>

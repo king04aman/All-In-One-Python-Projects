@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Journal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 style="color:white;">Welcome to Your Personal Journal</h1>
+    </header>
+    <div class="container">
+        <div class="button-container">
+            <a class="button" href="/add">Add New Entry</a>
+            <a class="button" href="/search">Search Entries</a>
+            <a class="button" href="/tags">View All Tags</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Personal Journal</p>
+    </footer>
+</body>
+</html>
