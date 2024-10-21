@@ -63,11 +63,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 Thanks go to these **Wonderful Contributors** ✨✨:
 
-<a href="https://github.com/king04aman/All-In-One-Python-Projects/graphs/contributors">
-	<object type="image/svg+xml" data="CONTRIBUTORS.svg" style="width: 100%; height: auto;">
-			<img src="CONTRIBUTORS.svg" style="width: 100%; height: auto;" alt="Contributors" />
-	</object>
-</a>
+<table>
+	<tr>
+		<td>
+			<a href="https://github.com/king04aman/All-In-One-Python-Projects/graphs/contributors">
+	    	<img src="https://contrib.rocks/image?repo=king04aman/All-In-One-Python-Projects" />
+	    </a>
+		</td>
+	</tr>
+</table>
 
 <hr>
 
