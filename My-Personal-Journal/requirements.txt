@@ -1,0 +1,8 @@
+flask
+sqlalchemy
+# sqlite3
+bcrypt
+pandas
+matplotlib
+# tkinter
+flask
