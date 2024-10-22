@@ -22,6 +22,7 @@
 * [Notepad](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Notepad)
 * [Password Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Password%20Generator)
 * [Plagiarism-Checker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Plagiarism-Checker)
+* [Pomodoro Timer](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Pomodoro%20Timer)
 * [QR Code Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/QR%20Code%20Generator)
 * [Random Movie Selector](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Random%20Movie%20Selector)
 * [Random Quotes Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Random%20Quotes%20Generator)
