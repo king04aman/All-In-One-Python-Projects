@@ -20,6 +20,7 @@
 * [Merge PDFs](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Merge%20PDFs)
 * [MobileNumber Tracker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/MobileNumber%20Tracker)
 * [Movie Scraper](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Movie%20Scraper)
+* [My-Personal-Journal](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/My-Personal-Journal)
 * [Notepad](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Notepad)
 * [OCR Image-to-Text Conversion](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/OCR%20Image-to-Text%20Conversion)
 * [Password Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Password%20Generator)
