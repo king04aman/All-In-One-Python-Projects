@@ -20,6 +20,7 @@
 * [MobileNumber Tracker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/MobileNumber%20Tracker)
 * [Movie Scraper](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Movie%20Scraper)
 * [Notepad](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Notepad)
+* [OCR Image-to-Text Conversion](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/OCR%20Image-to-Text%20Conversion)
 * [Password Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Password%20Generator)
 * [Plagiarism-Checker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Plagiarism-Checker)
 * [Pomodoro Timer](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Pomodoro%20Timer)
