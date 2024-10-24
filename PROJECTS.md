@@ -46,5 +46,6 @@
 * [Validate-Email](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Validate-Email)
 * [Video To Audio](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Video%20To%20Audio)
 * [Weather Alert](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Weather%20Alert)
+* [Word_frequency_counter](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Word_frequency_counter)
 * [Youtube Video Downloader](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Youtube%20Video%20Downloader)
 * [personal-finance-tracker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/personal-finance-tracker)
