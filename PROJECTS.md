@@ -1,6 +1,5 @@
 # Project List
 
-* [2D-Platformer](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/2D-Platformer)
 * [Age Calculator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Age%20Calculator)
 * [Alarm Bot](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Alarm%20Bot)
 * [Ascii Art Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Ascii%20Art%20Generator)
@@ -12,6 +11,7 @@
 * [Expense Splitter](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Expense%20Splitter)
 * [Facebook Video Downloader](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Facebook%20Video%20Downloader)
 * [Geographic Distance](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Geographic%20Distance)
+* [Gesture-Based-Game-Controller](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Gesture-Based-Game-Controller)
 * [Handwritten-Assignments](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Handwritten-Assignments)
 * [Headlight Detection](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Headlight%20Detection)
 * [Helmet Detection](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Helmet%20Detection)
