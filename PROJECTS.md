@@ -1,5 +1,6 @@
 # Project List
 
+* [2D-Platformer](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/2D-Platformer)
 * [Age Calculator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Age%20Calculator)
 * [Alarm Bot](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Alarm%20Bot)
 * [Ascii Art Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Ascii%20Art%20Generator)
