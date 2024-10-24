@@ -1,0 +1,3 @@
+geopy==2.2.0
+prompt_toolkit==3.0.8
+fpdf==1.7.2

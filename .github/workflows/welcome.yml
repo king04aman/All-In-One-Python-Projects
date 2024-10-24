@@ -1,0 +1,80 @@
+name: Welcome Comments
+
+permissions:
+  actions: write
+  attestations: write
+  checks: write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+
+on:
+  issues:
+    types: [opened, closed]
+  pull_request_target:
+    types: [opened, closed]
+
+jobs:
+  welcomer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Welcome on Issues or PRs
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const author = context.payload.sender.login;
+            const commentBody = (message) => `👋 @${author} 👋\n\n${message}`;
+
+            if (context.eventName === 'issues') {
+              const issue = context.payload.issue;
+
+              if (context.payload.action === 'opened') {
+                const message = `We're thrilled to see you opening an issue! Your input is valuable to us. Don’t forget to fill out our issue template for the best experience. We will look into it soon.`;
+                github.rest.issues.createComment({
+                  issue_number: issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: commentBody(message),
+                });
+              } else if (context.payload.action === 'closed') {
+                const message = `Thanks for closing the issue! We appreciate your updates.`;
+                github.rest.issues.createComment({
+                  issue_number: issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: commentBody(message),
+                });
+              }
+            } else if (context.eventName === 'pull_request_target') {
+              const pr = context.payload.pull_request;
+
+              if (context.payload.action === 'opened') {
+                const message = `We're delighted to have your pull request! Please take a moment to check our contributing guidelines and ensure you've filled out the PR template for a smooth process. We will review it soon.`;
+                github.rest.issues.createComment({
+                  issue_number: pr.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: commentBody(message),
+                });
+              } else if (context.payload.action === 'closed') {
+            		const message = pr.merged 
+                  ? `🎉 You've just merged your pull request! We're excited to have you in our community. Keep up the fantastic contributions to the project!`
+                  : `Thanks for closing the pull request! Your contributions are valuable to us.`;
+                
+                github.rest.issues.createComment({
+                  issue_number: pr.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: commentBody(message),
+                });
+              }
+            }
