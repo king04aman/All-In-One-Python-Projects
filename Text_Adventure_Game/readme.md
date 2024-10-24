@@ -32,7 +32,7 @@ Welcome to the **Text-Based Adventure Game**! This Python game is a simple inter
 1. Ensure you have Python 3 installed on your machine.
 2. Clone this repository to your local machine.
 3. Navigate to the project directory.
-4. Run the text_adventure_game.
+4. Run the text_adventure_game.py file.
 
 
 ## Code Overview
