@@ -1,0 +1,15 @@
+pyttsx3
+wmi
+SpeechRecognition
+wolframalpha
+numpy
+pyautogui
+requests
+wikipedia-api
+pywhatkit
+smtplib3
+psutil
+keyboard
+speedtest-cli
+opencv-python
+imdbpy
