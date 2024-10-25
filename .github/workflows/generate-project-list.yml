@@ -1,8 +1,6 @@
 name: Generate Project List
 
 on:
-  schedule:
-    - cron: 0 0 * * *
   push:
     branches:
       - main
