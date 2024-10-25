@@ -18,6 +18,7 @@
 * [Image Compression](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Image%20Compression)
 * [ImageSize Reducer](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/ImageSize%20Reducer)
 * [Img-Steganograpy](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Img-Steganograpy)
+* [Learn-FastAPI](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Learn-FastAPI)
 * [Mental Health chatbot](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Mental%20Health%20chatbot)
 * [Merge PDFs](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Merge%20PDFs)
 * [MobileNumber Tracker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/MobileNumber%20Tracker)
