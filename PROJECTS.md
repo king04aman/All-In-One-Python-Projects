@@ -6,6 +6,7 @@
 * [Audio Book Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Audio%20Book%20Generator)
 * [CountDown Timer](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/CountDown%20Timer)
 * [Currency Converter](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Currency%20Converter)
+* [Custom GPT](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Custom%20GPT)
 * [Customizable_Workout_Playlist_Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Customizable_Workout_Playlist_Generator)
 * [Digital Clock](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Digital%20Clock)
 * [Expense Splitter](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Expense%20Splitter)
