@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Load API key from environment variable (security fix)
+# Load API key from environment variable
 API_KEY = os.getenv('OPEN_WEATHER_MAP_API_KEY')
 
 if not API_KEY:
@@ -16,20 +16,16 @@ if not API_KEY:
 UNIT = 'metric'
 BASE_URL = 'https://api.openweathermap.org/data/2.5/find'
 
+# Load additional environment variables
+CITY = os.getenv('CITY', 'London')  # Default to 'London' if not provided
+TEMP_THRESHOLD = float(os.getenv('TEMP_THRESHOLD', 30.0))  # Default to 30°C
+WIND_SPEED_THRESHOLD = float(os.getenv('WIND_SPEED_THRESHOLD', 10.0))  # Default to 10 m/s
+
 
 def fetch_weather(city):
-    """Fetches weather data for a given city.
-
-    Args:
-        city (str): Name of the city.
-
-    Returns:
-        dict: Weather data if successful, None otherwise.
-    """
-
+    """Fetches weather data for a given city."""
     url = f"{BASE_URL}?q={city}&appid={API_KEY}&units={UNIT}"
     response = requests.get(url)
-
     if response.status_code == 200:
         return response.json()
     else:
@@ -38,16 +34,7 @@ def fetch_weather(city):
 
 
 def check_alerts(data, temp_threshold, wind_speed_threshold):
-    """Checks for temperature and wind speed alerts in weather data.
-
-    Args:
-        data (dict): Weather data.
-        temp_threshold (float): Temperature threshold in °C.
-        wind_speed_threshold (float): Wind speed threshold in m/s.
-
-    Prints alerts if any, otherwise prints a message indicating normal weather conditions.
-    """
-
+    """Checks for temperature and wind speed alerts in weather data."""
     if not data or 'list' not in data or not data['list']:
         print("No data available to check alerts.")
         return
@@ -69,20 +56,14 @@ def check_alerts(data, temp_threshold, wind_speed_threshold):
 
 
 def main():
-    """Prompts user for city name, temperature and wind speed thresholds,
-    and continuously checks for alerts.
-    """
-
-    city = input("Enter city name: ")
-    temp_threshold = float(input("Enter temperature threshold (°C): "))
-    wind_speed_threshold = float(input("Enter wind speed threshold (m/s): "))
-
+    """Continuously checks for weather alerts based on environment variables."""
     while True:
-        weather_data = fetch_weather(city)
-        check_alerts(weather_data, temp_threshold, wind_speed_threshold)
+        weather_data = fetch_weather(CITY)
+        check_alerts(weather_data, TEMP_THRESHOLD, WIND_SPEED_THRESHOLD)
         print("Waiting for the next check...")
         time.sleep(3600)  # check every hour
 
 
 if __name__ == "__main__":
     main()
+
