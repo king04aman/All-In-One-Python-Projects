@@ -20,4 +20,4 @@ RUN pip install -r requirement.txt
 CMD ["python","main.py"]
 
 
-EXPOSE 5001
+
