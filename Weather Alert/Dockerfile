@@ -10,6 +10,6 @@ COPY . .
 # Install Libraries
 RUN pip install -r requirement.txt
 
-# run app
+# Run app
 CMD ["python", "main.py"]
 
