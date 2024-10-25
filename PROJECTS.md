@@ -49,6 +49,7 @@
 * [Translator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Translator)
 * [URL Sortener](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/URL%20Sortener)
 * [Validate-Email](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Validate-Email)
+* [Video Processor](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Video%20Processor)
 * [Video To Audio](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Video%20To%20Audio)
 * [Weather Alert](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Weather%20Alert)
 * [Word_frequency_counter](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Word_frequency_counter)
