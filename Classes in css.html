@@ -1,0 +1,105 @@
+<!-- Question :- Classes in CSS 
+
+
+You are provided with an HTML file containing a series of <div> elements inside a container. Each <div> has a specific class associated with it that controls its styling. Your task is to implement the provided CSS to style these <div> elements according to the classes assigned to them.
+
+    Note: Please don't change any of the given HTML markup and the styles already present inside the style tag.
+    
+    Here are the steps you need to follow:
+    
+    Understand the Structure:
+    
+    The main container has the class main-container and contains multiple <div> elements, each assigned a class ranging from div1 to div5.
+    CSS Rules Provided:
+    
+    The provided CSS already defines specific height, width, and background color for each class (div1, div2, div3, div4, div5). Your task is to ensure that each <div> element inherits the correct styles based on its class.
+    Task:
+    
+    Identify the class for each <div> element.
+    Apply the CSS rules to these <div> elements so that they display with the correct height, width, and background color as specified in the CSS.
+    CSS to be applied according to class names :
+    div1
+    background color : 
+    #AA0000
+    Copy Icon
+    height:30px;
+    width: 100%
+    div2 
+    background color : 
+    #E52B50
+    Copy Icon
+    ;
+    height:30px;
+    width:100%
+    div3
+    background color : 
+    #E32636
+    Copy Icon
+    ;
+    height : 30px;
+    width:100%
+    div4
+    background color : 
+    #FD5C63
+    Copy Icon
+    ;
+    height: 30px;
+    width: 100%
+    div5
+    background color : 
+    #FBCEB1
+    Copy Icon
+    ;
+    height : 30px;
+    width: 100%
+     Expected Outcome:
+    
+    The webpage should display a stacked series of colored bars inside the main container, with each bar's color determined by the corresponding class.
+    The main container should display 10 colored bars, each 30px high and 300px wide, in the order defined by the HTML structure.
+
+    -->
+
+    <!-- Answer -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>CSS Selectors Example</title>
+        <style>
+            
+           .main-container {
+             height:300px;
+             width:300px;
+             border:1px solid black;
+             
+           }
+           body{
+           margin:0px;
+    padding:0px;
+    
+    }
+    </style>
+    </head>
+    <body>
+        <div class="main-container">
+          <div class="div1" style="background-color: #AA0000; height: 30px; width: 100%;"></div>
+    
+          <div class="div2" style="background-color: #E52B50; height: 30px; width: 100%;"></div>
+    
+          <div class="div3" style="background-color: #E32636; height: 30px; width:100%;"></div>
+    
+          <div class="div4" style="background-color: #FD5C63; height: 30px; width: 100%;"></div>
+    
+          <div class="div5" style="background-color: #FBCEB1; height: 30px; width: 100%;"></div>
+    
+          <div class="div1" style="background-color: #AA0000; height: 30px; width: 100%;"></div>
+    
+          <div class="div2" style="background-color: #E52B50; height: 30px; width: 100%;"></div>
+    
+          <div class="div3" style="background-color: #E32636; height: 30px; width:100%;"></div>
+    
+          <div class="div4" style="background-color: #FD5C63; height: 30px; width: 100%;"></div>
+          
+          <div class="div5" style="background-color: #FBCEB1; height: 30px; width: 100%;"></div>
+        </div>
+    </body>
+    </html>
