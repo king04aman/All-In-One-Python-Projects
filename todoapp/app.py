@@ -19,7 +19,7 @@ notebook_color = "#FFF8DC"  # Light beige to mimic a notebook page
 todo_list = []
 
 # Functions to manage tasks
-def add_task():
+def add_task(event=None):
     """Add a new task with a checkbox to mark as completed."""
     task_text = entry_task.get()
     if task_text:
@@ -52,7 +52,7 @@ def toggle_complete(task_var, checkbox):
     else:
         checkbox.config(fg="black", font=task_font)
 
-def delete_completed_tasks():
+def delete_completed_tasks(event=None):
     """Delete only ticked tasks from the list."""
     global todo_list
     for task in todo_list[:]:
@@ -91,6 +91,7 @@ frame_task.pack(pady=15)
 # Entry for new tasks
 entry_task = tk.Entry(frame_task, width=30, font=task_font, relief="solid", bd=1)
 entry_task.pack(side=tk.LEFT, padx=10)
+entry_task.bind("<Return>", add_task)  # Bind Enter key to add_task
 
 # "+" button for adding tasks
 button_add_task = tk.Button(frame_task, text="+", command=add_task, font=("Arial", 20, "bold"), bg=button_color, fg="white",
@@ -105,6 +106,7 @@ button_delete_task = tk.Button(app, text="Delete completed task", command=delete
 button_delete_task.pack(pady=10)
 button_delete_task.bind("<Enter>", lambda e: on_hover(button_delete_task, button_hover_color))
 button_delete_task.bind("<Leave>", lambda e: on_hover(button_delete_task, button_color))
+app.bind("<Delete>", delete_completed_tasks)  # Bind Delete key to delete_completed_tasks
 
 # Run the main loop
 app.mainloop()
