@@ -20,30 +20,40 @@ todo_list = []
 
 # Functions to manage tasks
 def add_task(event=None):
-    """Add a new task with a checkbox to mark as completed."""
-    task_text = entry_task.get()
-    if task_text:
-        task_var = tk.BooleanVar()
-        task_frame = tk.Frame(task_list_frame, bg=notebook_color, padx=5, pady=3)
+    """Add a new task with a checkbox to mark as completed. Handles duplicates and empty/whitespace inputs."""
+    task_text = entry_task.get().strip()  # Strip leading/trailing whitespace
+    if not task_text:
+        messagebox.showwarning("Input Error", "Task cannot be empty or just spaces!")
+        return
 
-        checkbox = tk.Checkbutton(
-            task_frame,
-            text=task_text,
-            variable=task_var,
-            command=lambda: toggle_complete(task_var, checkbox),
-            font=task_font,
-            bg=notebook_color,
-            fg="black",
-            selectcolor="white",
-            activeforeground=button_color
-        )
+    if any(task["task"].lower() == task_text.lower() for task in todo_list):
+        messagebox.showwarning("Duplicate Task", "This task already exists in your to-do list!")
+        return
 
-        checkbox.pack(anchor="w", pady=2)
-        todo_list.append({"task": task_text, "completed": task_var, "frame": task_frame})
-        task_frame.pack(anchor="w", padx=10, pady=5, fill="x")
-        entry_task.delete(0, tk.END)
-    else:
-        messagebox.showwarning("Input Error", "Please enter a task!")
+    if len(task_text) > 100:  # Optional: Limit task length to 100 characters
+        messagebox.showwarning("Input Error", "Task cannot exceed 100 characters!")
+        return
+
+    # Add task if it passes all checks
+    task_var = tk.BooleanVar()
+    task_frame = tk.Frame(task_list_frame, bg=notebook_color, padx=5, pady=3)
+
+    checkbox = tk.Checkbutton(
+        task_frame,
+        text=task_text,
+        variable=task_var,
+        command=lambda: toggle_complete(task_var, checkbox),
+        font=task_font,
+        bg=notebook_color,
+        fg="black",
+        selectcolor="white",
+        activeforeground=button_color
+    )
+
+    checkbox.pack(anchor="w", pady=2)
+    todo_list.append({"task": task_text, "completed": task_var, "frame": task_frame})
+    task_frame.pack(anchor="w", padx=10, pady=5, fill="x")
+    entry_task.delete(0, tk.END)
 
 def toggle_complete(task_var, checkbox):
     """Update the checkbox color when the task is marked complete or incomplete."""
