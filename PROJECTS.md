@@ -23,6 +23,7 @@
 * [Mental Health chatbot](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Mental%20Health%20chatbot)
 * [Merge PDFs](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Merge%20PDFs)
 * [MobileNumber Tracker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/MobileNumber%20Tracker)
+* [Mood Based Music Recommender](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Mood%20Based%20Music%20Recommender)
 * [Movie Scraper](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Movie%20Scraper)
 * [My-Personal-Journal](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/My-Personal-Journal)
 * [Notepad](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Notepad)
