@@ -132,8 +132,23 @@ def main(text):
     # Generate summary
     summary = summarizer.summarize(text)
 
-    print(summary)
+    print("Summary : ")
+    print(summary['summary'])
+    
+    
+    print("------\n")
+    
+    print("Key Points : ")
+    for i,j in enumerate(summary["key_points"]):
+        print(f"{i+1}. {j}")
+        
+    print("------")
+    
 
 
 if __name__ == "__main__":
-    main()
+    main("""NLP is a subfield of computer science and artificial intelligence concerned with interactions between computers and human (natural) languages. It is used to apply machine learning algorithms to text and speech.
+
+For example, we can use NLP to create systems like speech recognition, document summarization, machine translation, spam detection, named entity recognition, question answering, autocomplete, predictive typing and so on.
+
+Nowadays, most of us have smartphones that have speech recognition. These smartphones use NLP to understand what is said. Also, many people use laptops which operating system has a built-in speech recognition.""")
