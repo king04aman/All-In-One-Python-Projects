@@ -10,6 +10,7 @@
 * [Customizable_Workout_Playlist_Generator](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Customizable_Workout_Playlist_Generator)
 * [Digital Clock](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Digital%20Clock)
 * [Expense Splitter](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Expense%20Splitter)
+* [Extractive Text Summarization](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Extractive%20Text%20Summarization)
 * [Facebook Video Downloader](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Facebook%20Video%20Downloader)
 * [Geographic Distance](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Geographic%20Distance)
 * [Gesture-Based-Game-Controller](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Gesture-Based-Game-Controller)
