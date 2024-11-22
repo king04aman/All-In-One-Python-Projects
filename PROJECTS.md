@@ -39,6 +39,7 @@
 * [Recipe Finder with Meal Planner](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Recipe%20Finder%20with%20Meal%20Planner)
 * [Resume Builder](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Resume%20Builder)
 * [Simple Assistant](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Simple%20Assistant)
+* [Snake-Game](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Snake-Game)
 * [Speech To Text](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Speech%20To%20Text)
 * [Spell Checker](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Spell%20Checker)
 * [Telegram Bot](https://github.com/king04aman/All-In-One-Python-Projects/tree/main/Telegram%20Bot)
