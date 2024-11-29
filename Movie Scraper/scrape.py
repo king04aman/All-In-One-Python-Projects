@@ -48,13 +48,14 @@ def getMovieDetails(movieName:str):
        i.text for i in box_two.select('div.ipc-chip-list__scroller>a>span')]
     
     # Fix ratings
-    try:
-        movieDetails['rating'] = f"{bs.find(
-            'div', {'data-testid': 'hero-rating-bar__aggregate-rating__score'}).span.text}/10 ({bs.find('div', {'class': 'sc-bde20123-3 gPVQxL'}).text})"
-        movieDetails['runtime'] = box[2].text.strip()
-    except AttributeError:
-        movieDetails['rating'] = 'Not yet rated'
-        movieDetails['runtime'] = 'Not available'
+   
+try:
+    movieDetails['rating'] = f"{bs.find('div', {'data-testid': 'hero-rating-bar__aggregate-rating__score'}).span.text}/10 ({bs.find('div', {'class': 'sc-bde20123-3 gPVQxL'}).text})"
+    movieDetails['runtime'] = box[2].text.strip()
+except AttributeError:
+    movieDetails['rating'] = 'Not yet rated'
+    movieDetails['runtime'] = 'Not available'
+
 
     # To get movie release date
     movie_release_dates_url= f"{url}{box[0].a.attrs['href']}" 
