@@ -1,5 +1,5 @@
 from time import strftime
-from tkinter import Label, Tk
+from tkinter import Label, Tk , Button
 
 window = Tk()
 window.title("Digital Clock")
@@ -27,7 +27,7 @@ def update_label():
     clock_label.pack(anchor="center")
 
 update_label()
-window.mainloop()def update_label():
+window.mainloop() def update_label():
     clock_label.configure(text=strftime("%H:%M:%S"))
     date_label.configure(text=strftime("%A, %b %d, %Y"))
     clock_label.after(1000, update_label)
