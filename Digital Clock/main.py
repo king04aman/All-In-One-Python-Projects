@@ -12,6 +12,13 @@ clock_label = Label(
 )
 clock_label.place(x=50, y=50)
 
+# NEW date label
+date_label = Label(
+    window, bg="black", fg="white", font=("Arial", 14)
+)
+date_label.pack(pady=(0, 10), anchor="center")
+
+
 
 def update_label():
     current_time = strftime("%H: %M: %S\n %d-%m-%Y ")
@@ -20,4 +27,8 @@ def update_label():
     clock_label.pack(anchor="center")
 
 update_label()
-window.mainloop()
+window.mainloop()def update_label():
+    clock_label.configure(text=strftime("%H:%M:%S"))
+    date_label.configure(text=strftime("%A, %b %d, %Y"))
+    clock_label.after(1000, update_label)
+
