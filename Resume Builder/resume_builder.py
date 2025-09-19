@@ -15,7 +15,7 @@ resume_data = {
     "skills": [],
     "projects": [],
     "certifications": [],
-    "achievements": []
+    "achievements": [],
     "internships":[]
     
 }
@@ -277,7 +277,7 @@ def interactive_menu():
             add_skills()
         elif choice == 5:
             add_projects()
-        elif choice == 6:              
+        elif choice == 6:
             add_internships()
         elif choice == 7:
             add_certifications()
