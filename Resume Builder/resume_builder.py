@@ -232,6 +232,20 @@ def generate_pdf():
     os.system(f"start {pdf_output_path}" if os.name == "nt" else f"open {pdf_output_path}")
     print(f"Resume generated: {pdf_output_path}")
 
+        # Internships  
+    if resume_data["internships"]:
+        pdf.set_font('Arial', 'B', 12)
+        pdf.cell(0, 10, "Internships", 0, 1)
+        pdf.set_font('Arial', '', 11)
+        for it in resume_data["internships"]:
+            hdr = f"{it['role']} at {it['company']}"
+            if it.get("location"):
+                hdr += f" — {it['location']}"
+            pdf.cell(0, 10, f"{hdr} ({it['start_date']} - {it['end_date']})", 0, 1)
+            if it.get("details"):
+                pdf.multi_cell(0, 10, "Highlights: " + ", ".join(it["details"]))
+
+
 # Main Menu using button_dialog from prompt_toolkit
 def interactive_menu():
     while True:
