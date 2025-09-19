@@ -26,6 +26,10 @@ def calculate_distance_and_time(coord1, coord2, avg_speed):
         raise ValueError(f"Longitude {lon} out of range (-180..180)")
     return coord
 
+    def km_to_miles(km: float) -> float:
+    """Convert kilometers to miles."""
+    return km * 0.621371
+
 
     
 
