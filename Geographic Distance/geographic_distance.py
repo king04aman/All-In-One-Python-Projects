@@ -30,6 +30,16 @@ def calculate_distance_and_time(coord1, coord2, avg_speed):
     """Convert kilometers to miles."""
     return km * 0.621371
 
+    def format_travel_time(hours: float) -> str:
+    """Format fractional hours as 'Hh Mm'."""
+    h = int(hours)
+    m = int(round((hours - h) * 60))
+    if m == 60:
+        h += 1
+        m = 0
+    return f"{h}h {m}m"
+
+
 
     
 
