@@ -16,6 +16,8 @@ resume_data = {
     "projects": [],
     "certifications": [],
     "achievements": []
+    "internships":[]
+    
 }
 
 # Function to navigate back to the main menu
@@ -53,6 +55,27 @@ def add_experience():
         if more == "no":
             break
     back_to_menu()
+
+    # Add internships  <-- NEW
+def add_internships():
+    while True:
+        clear_screen()
+        print("Enter Internship Information")
+        internship = {
+            "role": prompt("Role/Title: "),
+            "company": prompt("Company: "),
+            "location": prompt("Location (optional): "),
+            "start_date": prompt("Start Date (e.g., Jun 2024): "),
+            "end_date": prompt("End Date (e.g., Aug 2024 or 'Present'): "),
+            "details": [s.strip() for s in prompt("Highlights (comma-separated): ").split(",") if s.strip()]
+        }
+        resume_data["internships"].append(internship)
+
+        more = prompt("Add another internship? (yes/no): ").strip().lower()
+        if more == "no":
+            break
+    back_to_menu()
+
 
 # Add education details
 def add_education():
