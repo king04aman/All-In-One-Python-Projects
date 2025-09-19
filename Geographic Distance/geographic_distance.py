@@ -17,6 +17,18 @@ def calculate_distance_and_time(coord1, coord2, avg_speed):
 
     return distance, travel_time
 
+    def validate_coordinates(coord):
+    """Ensure latitude and longitude are within valid ranges."""
+    lat, lon = coord
+    if not (-90 <= lat <= 90):
+        raise ValueError(f"Latitude {lat} out of range (-90..90)")
+    if not (-180 <= lon <= 180):
+        raise ValueError(f"Longitude {lon} out of range (-180..180)")
+    return coord
+
+
+    
+
 
 def main():
     # Coordinates (latitude, longitude)
