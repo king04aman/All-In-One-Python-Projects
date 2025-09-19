@@ -259,10 +259,11 @@ def interactive_menu():
                 ("Education", 3),
                 ("Skills", 4),
                 ("Projects", 5),
-                ("Certifications", 6),
-                ("Achievements", 7),
-                ("Generate PDF", 8),
-                ("Exit", 9)
+                 ("Internships", 6),
+                ("Certifications", 7),
+                ("Achievements", 8),
+                ("Generate PDF", 9),
+                ("Exit", 10)
             ]
         ).run()
 
@@ -276,13 +277,15 @@ def interactive_menu():
             add_skills()
         elif choice == 5:
             add_projects()
-        elif choice == 6:
-            add_certifications()
+        elif choice == 6:              
+            add_internships()
         elif choice == 7:
-            add_achievements()
+            add_certifications()
         elif choice == 8:
-            generate_pdf()
+            add_achievements()
         elif choice == 9:
+            generate_pdf()
+        elif choice == 10:
             break
 
 # Start the program
