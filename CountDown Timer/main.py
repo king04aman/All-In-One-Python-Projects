@@ -1,6 +1,12 @@
 from tkinter import *
 import tkinter as tk
 
+def fmt_time(seconds: int) -> str:
+    seconds = max(0, int(seconds))
+    m, s = divmod(seconds, 60)
+    return f"{m:02d}:{s:02d}"
+
+
 class Application(Frame):
     def __init__(self,master):
         super(Application,self).__init__(master)
@@ -39,7 +45,9 @@ class Application(Frame):
         self.someFrame.pack(side=TOP)
 
         self.labelvariable = StringVar()
-        self.labelvariable.set("")
+        self.labelvariable.set(fmt_time(0))
+
+        
 
         self.thelabel = Label(self,textvariable = self.labelvariable,font=('Helvetica',50))
         self.thelabel.pack(side=TOP)
@@ -80,14 +88,14 @@ class Application(Frame):
     def countdown(self, timeInSeconds, start=True):
         if timeInSeconds == 0:
             self._starttime=0
-            self.labelvariable.set("0")
+            self.labelvariable.set(fmt_time(0))
             return
         if start:
             self._starttime = timeInSeconds
         if self._paused:
             self._alarm_id = self.master.after(1000, self.countdown, timeInSeconds, False)
         else:
-            app.labelvariable.set(timeInSeconds)
+            app.labelvariable.set(fmt_time(timeInSeconds))
             self._alarm_id = self.master.after(1000, self.countdown, timeInSeconds-1, False)
 
 
