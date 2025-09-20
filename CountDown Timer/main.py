@@ -5,6 +5,24 @@ def fmt_time(seconds: int) -> str:
     seconds = max(0, int(seconds))
     m, s = divmod(seconds, 60)
     return f"{m:02d}:{s:02d}"
+    
+    try:
+    import winsound  # Windows
+except Exception:
+    winsound = None
+
+def play_alarm():
+    try:
+        if winsound:
+            winsound.Beep(880, 300)
+            winsound.Beep(988, 300)
+            winsound.Beep(1047, 300)
+        else:
+            # macOS/Linux fallback: terminal bell
+            print("\a", end="", flush=True)
+    except Exception:
+        pass
+
 
 
 class Application(Frame):
@@ -89,7 +107,8 @@ class Application(Frame):
         if timeInSeconds == 0:
             self._starttime=0
             self.labelvariable.set(fmt_time(0))
-            return
+            play_alarm()
+            return 
         if start:
             self._starttime = timeInSeconds
         if self._paused:
