@@ -1,6 +1,7 @@
 from tkinter import *
 from random import choice
 import string
+import pyperclip
 
 class App:
     def __init__(self):
@@ -13,7 +14,8 @@ class App:
 
         self.label()
         self.entry()
-        self.button()
+        self.options()
+        self.buttons()
 
     def label(self):
         label_title = Label(self.window, text='Welcome to password generator', font=('Courrier', 20), bg='gray', fg='black')
@@ -34,6 +36,18 @@ class App:
             password+=choice(characters)
         self.password_entry.delete(0, END)
         self.password_entry.insert(0, password)
+
+        if length < 8:
+            strength = "Weak"
+        elif length < 12:
+            strength = "Medium"
+        else:
+            strength = "Strong"
+        self.strength_label.config(text=f"Strength: {strength}")
+
+    def copy_password(self):
+        pyperclip.copy(self.password_entry.get())
+        self.strength_label.config(text="Copied to clipboard!")
         
 app = App()
 app.window.mainloop()
