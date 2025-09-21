@@ -8,15 +8,18 @@ count = pdf_Reader.numPages
 textList = []
 
 for i in range(count):
-   try:
-    page = pdf_Reader.getPage(i)    
-    textList.append(page.extractText())
-   except:
-       pass
+    try:
+        page = pdf_Reader.getPage(i)
+        textList.append(page.extractText())
+    except Exception as e:
+        print(f"Skipping page {i}: {e}")
+       
 
 textString = " ".join(textList)
-print(textString)
+print(f"Extracted {len(textString)} characters from {count} pages.")
 language = 'en'
 
 myAudio = gTTS(text=textString, lang=language, slow=False)
 myAudio.save("Audio.mp3")
+
+print("[ok] Audio book saved as Audio.mp3")
