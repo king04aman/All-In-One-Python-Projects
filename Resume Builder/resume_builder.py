@@ -15,7 +15,9 @@ resume_data = {
     "skills": [],
     "projects": [],
     "certifications": [],
-    "achievements": []
+    "achievements": [],
+    "internships":[]
+    
 }
 
 # Function to navigate back to the main menu
@@ -53,6 +55,9 @@ def add_experience():
         if more == "no":
             break
     back_to_menu()
+
+   
+
 
 # Add education details
 def add_education():
@@ -127,6 +132,29 @@ def add_achievements():
         if more == "no":
             break
     back_to_menu()
+    
+    # Add internships  
+def add_internships():
+    while True:
+        clear_screen()
+        print("Enter Internship Information")
+        internship = {
+            "role": prompt("Role/Title: "),
+            "company": prompt("Company: "),
+            "location": prompt("Location (optional): "),
+            "start_date": prompt("Start Date (e.g., Jun 2024): "),
+            "end_date": prompt("End Date (e.g., Aug 2024 or 'Present'): "),
+            "details": [s.strip() for s in prompt("Highlights (comma-separated): ").split(",") if s.strip()]
+        }
+        resume_data["internships"].append(internship)
+
+        more = prompt("Add another internship? (yes/no): ").strip().lower()
+        if more == "no":
+            break
+    back_to_menu()
+
+
+
 
 # PDF Generation class
 class ResumePDF(FPDF):
@@ -186,7 +214,21 @@ def generate_pdf():
         pdf.cell(0, 10, proj["name"], 0, 1)
         pdf.multi_cell(0, 10, proj["description"])
         pdf.cell(0, 10, f"Technologies Used: {proj['technologies']}", 0, 1)
+    # Internships  
+    if resume_data["internships"]:
+     pdf.set_font('Arial', 'B', 12)
+        pdf.cell(0, 10, "Internships", 0, 1)
+        pdf.set_font('Arial', '', 11)
+        for it in resume_data["internships"]:
+            hdr = f"{it['role']} at {it['company']}"
+            if it.get("location"):
+                hdr += f" — {it['location']}"
+            pdf.cell(0, 10, f"{hdr} ({it['start_date']} - {it['end_date']})", 0, 1)
+            if it.get("details"):
+                pdf.multi_cell(0, 10, "Highlights: " + ", ".join(it["details"]))
 
+
+                
     # Certifications
     pdf.set_font('Arial', 'B', 12)
     pdf.cell(0, 10, "Certifications", 0, 1)
@@ -209,6 +251,8 @@ def generate_pdf():
     os.system(f"start {pdf_output_path}" if os.name == "nt" else f"open {pdf_output_path}")
     print(f"Resume generated: {pdf_output_path}")
 
+        
+
 # Main Menu using button_dialog from prompt_toolkit
 def interactive_menu():
     while True:
@@ -222,10 +266,11 @@ def interactive_menu():
                 ("Education", 3),
                 ("Skills", 4),
                 ("Projects", 5),
-                ("Certifications", 6),
-                ("Achievements", 7),
-                ("Generate PDF", 8),
-                ("Exit", 9)
+                 ("Internships", 6),
+                ("Certifications", 7),
+                ("Achievements", 8),
+                ("Generate PDF", 9),
+                ("Exit", 10)
             ]
         ).run()
 
@@ -240,12 +285,14 @@ def interactive_menu():
         elif choice == 5:
             add_projects()
         elif choice == 6:
-            add_certifications()
+            add_internships()
         elif choice == 7:
-            add_achievements()
+            add_certifications()
         elif choice == 8:
-            generate_pdf()
+            add_achievements()
         elif choice == 9:
+            generate_pdf()
+        elif choice == 10:
             break
 
 # Start the program
