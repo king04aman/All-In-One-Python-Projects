@@ -1,18 +1,17 @@
 import time
 
 
-def countdown(minutes, label):
+def countdown(minutes: int, label: str) -> None:
+    """Print a mm:ss countdown once per second for the given label."""
     total_seconds = minutes * 60
-    while total_seconds:
+    while total_seconds >= 0:
         mins, secs = divmod(total_seconds, 60)
-        timer = f"{mins:02d}:{secs:02d}"
-        print(f"{label} Timer: {timer}", end="\r")
+        print(f"{label} Timer: {mins:02d}:{secs:02d}", end="\r")
         time.sleep(1)
         total_seconds -= 1
     print(f"\n{label} finished!")
 
-
-def handle_pause_stop():
+def handle_pause_stop() -> bool:
     while True:
         user_input = input(
             "\nPress 'p' to pause, 's' to stop, or 'Enter' to continue: "
@@ -69,4 +68,8 @@ if __name__ == "__main__":
     long_break_minutes = get_valid_input("Enter long break interval in minutes: ")
     cycles = get_valid_input("Enter the number of cycles: ")
 
-    pomodoro_timer(work_minutes, short_break_minutes, long_break_minutes, cycles)
+   while True:
+        pomodoro_timer(work_minutes, short_break_minutes, long_break_minutes, cycles)
+        # If user chose to repeat at the end, loop continues; otherwise we break here.
+        if not repeat_or_end():
+            break
