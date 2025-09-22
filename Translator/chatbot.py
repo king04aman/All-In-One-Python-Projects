@@ -14,3 +14,10 @@ class TranslateClass:
             ['Target', translated]
         ]
         return tabulate(data, headers="firstrow", tablefmt="grid")
+    
+
+if __name__ == "__main__":
+    sentence = input("Enter a sentence: ")
+    lang = input("Enter target language code (e.g., 'hi' for Hindi, 'es' for Spanish): ")
+    print(TranslateClass(sentence, lang))
+
