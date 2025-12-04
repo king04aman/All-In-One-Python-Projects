@@ -1,0 +1,40 @@
+# Attack Surface Mapper - Dependencies
+# Python-based OSINT Reconnaissance Tool
+
+# Core Dependencies
+requests==2.31.0
+click==8.1.7
+colorama==0.4.6
+
+# API and Web Scraping
+bs4==4.12.2
+lxml==4.9.3
+selenium==4.13.0
+
+# DNS and Networking
+dnspython==2.4.2
+nmap==0.0.1
+python-nmap==0.0.1
+
+# Data Processing
+pandas==2.0.3
+numpy==1.24.3
+
+# Security and Cryptography
+cryptography==41.0.3
+
+# Database (optional)
+sqlalchemy==2.0.21
+
+# Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+
+# Documentation
+sphinx==7.2.6
+
+# Development
+black==23.9.1
+flake8==6.0.0
+pylint==2.17.5
+mypy==1.5.1
