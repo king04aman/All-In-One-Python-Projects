@@ -1,8 +1,9 @@
 def gauss_partial(matrix: list, index_column: int):
+    """Move the row with the largest remaining pivot magnitude into place."""
     index_max_val = index_column
 
     for i in range(index_column, len(matrix)):
-        if matrix[index_column][index_column] < abs(matrix[i][index_column]):
+        if abs(matrix[index_max_val][index_column]) < abs(matrix[i][index_column]):
             index_max_val = i
 
     if index_column != index_max_val:
